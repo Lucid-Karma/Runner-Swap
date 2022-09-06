@@ -170,7 +170,7 @@ public abstract class TrackBase : MonoBehaviour
 
     public virtual void CreateTrack()
     {
-        offset = Vector3.down;
+        offset = Vector3.zero;//Vector3.down;
         createPos = PosReferance.mainPosition + offset;
         GameObject t = GetTrack();
 
@@ -182,7 +182,7 @@ public abstract class TrackBase : MonoBehaviour
                 }
             }
 
-            createPos.y = -1;
+            createPos.y = 0;
             t.transform.position = createPos;
             t.SetActive(true);
     }
