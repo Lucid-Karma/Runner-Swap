@@ -109,14 +109,14 @@ public class SwipeController : MonoBehaviour
                     if(heightChange >= 250.0f && transform.position.y == 0)
                     {
                         duration = 1.2f;
-                        //Jump(duration);
-                        transform.DOLocalMove(new Vector3(0, 4, 0), .6f);//.OnComplete(()=> {transform.DOLocalMove(new Vector3(0, 1, 0), .3f);});
+                        Jump(duration);
+                        //transform.DOLocalMove(new Vector3(0, 4, 0), .6f);//.OnComplete(()=> {transform.DOLocalMove(new Vector3(0, 1, 0), .3f);});
                     }
-                    else if(heightChange < 0)
+                    /*else if(heightChange < 0)
                     {
                         duration = 0.1f;
                         transform.DOLocalMoveY(0, duration);
-                    }
+                    }*/
                     break;
             }
         }
@@ -126,7 +126,7 @@ public class SwipeController : MonoBehaviour
     public float duration;
     public Tween Jump(float s)
     {
-        return transform.DOJump(new Vector3(0, 2.0f, 0), 3.0f, 1, s).SetEase(Ease.InOutSine);//1.2f power ve 1.2f duration
-                    //.OnPlay(()=>{transform.DOLocalMove(transform.position + new Vector3(transform.position.x, 0, 0), .25f);});
+        return transform.DOJump(new Vector3(0, 2.0f, 0), 3.0f, 1, s).SetEase(Ease.InOutSine);//1.2f power and 1.2f duration
+                    //.OnPlay(()=>{transform.DOLocalMove(transform.position + Vector3.zero, .25f);});
     }
 }

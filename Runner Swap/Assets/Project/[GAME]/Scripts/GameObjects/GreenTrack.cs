@@ -20,7 +20,7 @@ public class GreenTrack : TrackBase
             createPos.z = 0;
         }
 
-        createPos.y = -1;
+        createPos.y = 0;
         t.transform.position = createPos;
         t.SetActive(true);
         control = 1;

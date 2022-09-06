@@ -140,7 +140,7 @@ public class TrackManager : Singleton<TrackManager>
                 }
             }
 
-            createPos.y = -1;
+            createPos.y = 0;
             t.transform.position = createPos;
             t.SetActive(true);    
             OnTrackCreate?.Invoke();     
@@ -148,7 +148,7 @@ public class TrackManager : Singleton<TrackManager>
 
     public void CreateTrackFirst()
     {
-        createPos = Vector3.down;
+        createPos = Vector3.zero;//Vector3.down;
 
         for (int i = 0; i < 5; i++)
         {
@@ -162,7 +162,7 @@ public class TrackManager : Singleton<TrackManager>
                 }
             }
 
-            createPos.y = -1;
+            createPos.y = 0;
             t.transform.position = createPos;
             t.SetActive(true); 
             EventManager.OnIndexLoad.Invoke();
