@@ -1278,8 +1278,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 5.09, z: -9.91}
+  m_LocalRotation: {x: -0.088036634, y: 0.088332295, z: -0.007837979, w: -0.99216205}
+  m_LocalPosition: {x: 1.0215716, y: 3.165736, z: -8.492173}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1412,6 +1412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rotuko_Jumping
       objectReference: {fileID: 0}
+    - target: {fileID: 5035588847257408094, guid: ec0dfd921a0338146b140f54955a4f14, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7772608656616071314, guid: ec0dfd921a0338146b140f54955a4f14, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1538,6 +1542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1190312651}
   - component: {fileID: 1190312650}
+  - component: {fileID: 1190312652}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1573,6 +1578,7 @@ MonoBehaviour:
   parentRefer: {x: 0, y: 0, z: 0}
   index: 0
   amountToTrackPool: 5
+  speed: 0
 --- !u!4 &1190312651
 Transform:
   m_ObjectHideFlags: 0
@@ -1587,6 +1593,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1190312652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190312649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8838f8048b9c824eaf2048a15285eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1240780759
 GameObject:
   m_ObjectHideFlags: 0

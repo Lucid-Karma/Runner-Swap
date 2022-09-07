@@ -10,6 +10,7 @@ public class TrackManager : Singleton<TrackManager>
     public List<GameObject> Tracks = new List<GameObject>();
 
     private float startTime;
+    public float speed;
     [SerializeField]
     private bool canMoveTracks;
     public Vector3 createPos;
@@ -50,6 +51,11 @@ public class TrackManager : Singleton<TrackManager>
                 Tracks.Add(obj);   
             }
         }
+    }
+
+    void Start()
+    {
+        speed = 20f;
     }
 
     private bool isItFirst = true;
@@ -94,13 +100,14 @@ public class TrackManager : Singleton<TrackManager>
         MoveTrackObjects();
         ManageTracks();
     }
+    //public float speed;
     private void MoveTrackObjects()
     {
         parentRefer = PosReferance.mainPosition;
 
         for(int i = 0; i < Tracks.Count; i++)
         {
-            Tracks[i].transform.position += Vector3.back * 20f * Time.deltaTime;
+            Tracks[i].transform.position += Vector3.back * speed * Time.deltaTime;
             parentRefer.z = Tracks[i].transform.position.z;
 
             Tracks[i].transform.position = parentRefer;

@@ -108,11 +108,14 @@ public class Coin : MonoBehaviour
         return offset;
     }
 
+    private float speed;
     public void MoveCoinObjects()
     {
+        speed = TrackManager.Instance.speed;
+
         for (int i = 0; i < pooledObjects.Count; i++)
         {
-            pooledObjects[i].transform.position += Vector3.back * 20f * Time.deltaTime;
+            pooledObjects[i].transform.position += Vector3.back * speed * Time.deltaTime;
         }
     }
 

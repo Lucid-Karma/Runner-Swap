@@ -135,12 +135,15 @@ public abstract class TrackBase : MonoBehaviour
         ManageTracks();
     }
 
+    private float speed;
     public void MoveTrackObjects()
     {
+        speed = TrackManager.Instance.speed;
+
         parentRefer = new Vector3(PosReferance.mainPosition.x + 97, PosReferance.mainPosition.y, PosReferance.mainPosition.z);
         for (int i = 0; i < subsidiaryTracks.Count; i++)
         {
-            subsidiaryTracks[i].transform.position += Vector3.back * 20f * Time.deltaTime;
+            subsidiaryTracks[i].transform.position += Vector3.back * speed * Time.deltaTime;
             parentRefer.z = subsidiaryTracks[i].transform.position.z;
 
             subsidiaryTracks[i].transform.position = parentRefer;

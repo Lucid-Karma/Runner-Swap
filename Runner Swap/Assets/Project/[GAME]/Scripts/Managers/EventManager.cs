@@ -28,6 +28,7 @@ public static class EventManager
     public static UnityEvent OnIndexLoad = new UnityEvent();
 
     public static UnityEvent OnPlayerStartedRunning = new UnityEvent();
+    public static UnityEvent OnPlayerDataUpdated = new UnityEvent();
 
     public static UnityEvent OnMusicOn = new UnityEvent();
     public static UnityEvent OnMusicOff = new UnityEvent();

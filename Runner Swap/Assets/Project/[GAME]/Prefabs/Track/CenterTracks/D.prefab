@@ -1209,11 +1209,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 64484599826468032, guid: a9b5436c77c79497486ac04c79b37e2f, type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64484599826468032, guid: a9b5436c77c79497486ac04c79b37e2f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 64484599826468032, guid: a9b5436c77c79497486ac04c79b37e2f, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9b5436c77c79497486ac04c79b37e2f, type: 3}
