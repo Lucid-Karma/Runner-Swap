@@ -1953,9 +1953,10 @@ GameObject:
   - component: {fileID: 3017365660903831838}
   - component: {fileID: 3017365660903831839}
   - component: {fileID: 4446533274204701922}
+  - component: {fileID: 4072368549066044205}
   m_Layer: 0
   m_Name: holder-katana
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2034,10 +2035,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3017365660903831837}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: b34d7859aec0b4f81a7638ea89ce7ffb, type: 3}
 --- !u!65 &4446533274204701922
@@ -2053,6 +2054,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6523069, y: 1.4176921, z: 0.8049749}
   m_Center: {x: 0.02539142, y: 0.70884603, z: -0.025651297}
+--- !u!114 &4072368549066044205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3017365660903831837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fccf9a76f6f35c4b92ac8becde236f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3017365660915886699
 GameObject:
   m_ObjectHideFlags: 0

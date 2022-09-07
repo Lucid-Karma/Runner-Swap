@@ -10,6 +10,7 @@ public class CoinCollector : MonoBehaviour
         {
             EventManager.OnCoinPickUp.Invoke();
             Coin.SharedInstance.DisposeOnTrigger(other);
+            //EventManager.OnPlayerDataUpdated.Invoke();
         }
     }
 }

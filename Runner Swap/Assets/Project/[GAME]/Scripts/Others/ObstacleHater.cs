@@ -6,10 +6,16 @@ public class ObstacleHater : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag != "Player")
+        Debug.Log(other.gameObject.tag);
+        /*if(other.gameObject.tag == "coin")
         {
-            Coin.SharedInstance.DisposeOnTrigger(other);
+            other.gameObject.SetActive(false);
             Debug.Log("destroyed!");
-        }
+        }*/
+        /*else
+        {
+            Debug.Log(other.gameObject.tag);
+        }*/
+        //Debug.Log("wrong!!");
     }
 }
