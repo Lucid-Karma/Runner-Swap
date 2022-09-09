@@ -126,7 +126,7 @@ public class SwipeController : MonoBehaviour
     public float duration;
     public Tween Jump(float s)
     {
-        return transform.DOJump(new Vector3(0, 2.0f, 0), 3.0f, 1, s).SetEase(Ease.InOutSine);//1.2f power and 1.2f duration
-                    //.OnPlay(()=>{transform.DOLocalMove(transform.position + Vector3.zero, .25f);});
+        return transform.DOJump(new Vector3(0, 2.0f, 0), 3.0f, 1, s).SetEase(Ease.InOutSine)//;//1.2f power and 1.2f duration
+                    .OnPlay(()=>{transform.DOLocalMove(transform.position + Vector3.zero, .25f);});
     }
 }

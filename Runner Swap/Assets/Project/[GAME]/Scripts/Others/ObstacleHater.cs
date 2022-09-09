@@ -6,7 +6,7 @@ public class ObstacleHater : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.tag);
+        //Debug.Log(other.gameObject.tag);
         /*if(other.gameObject.tag == "coin")
         {
             other.gameObject.SetActive(false);

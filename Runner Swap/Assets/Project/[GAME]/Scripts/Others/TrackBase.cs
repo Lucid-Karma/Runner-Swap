@@ -135,8 +135,8 @@ public abstract class TrackBase : MonoBehaviour
         ManageTracks();
     }
 
-    private float speed;
-    public void MoveTrackObjects()
+    public float speed;
+    public virtual void MoveTrackObjects()
     {
         speed = TrackManager.Instance.speed;
 
