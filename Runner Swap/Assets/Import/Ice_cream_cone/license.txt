@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ice cream cone
+* source:	https://sketchfab.com/3d-models/ice-cream-cone-cdfac78f275c48cfa4f8a56aff68fe86
+* author:	ccincotti3 (https://sketchfab.com/ccincotti3)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ice cream cone" (https://sketchfab.com/3d-models/ice-cream-cone-cdfac78f275c48cfa4f8a56aff68fe86) by ccincotti3 (https://sketchfab.com/ccincotti3) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

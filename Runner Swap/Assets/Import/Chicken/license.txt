@@ -1,0 +1,11 @@
+Model Information:
+* title:	Chicken
+* source:	https://sketchfab.com/3d-models/chicken-c79774c67b374894876db3bed89e0661
+* author:	anf9790 (https://sketchfab.com/anf9790)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Chicken" (https://sketchfab.com/3d-models/chicken-c79774c67b374894876db3bed89e0661) by anf9790 (https://sketchfab.com/anf9790) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
