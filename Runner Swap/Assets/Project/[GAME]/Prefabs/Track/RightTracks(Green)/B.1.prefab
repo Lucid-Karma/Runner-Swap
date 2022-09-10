@@ -577,6 +577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence-picket-broken
       objectReference: {fileID: 0}
+    - target: {fileID: 1400936089926566, guid: ae3d7ce39118d49e6a6b08196c4c28cf, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4979626480685062, guid: ae3d7ce39118d49e6a6b08196c4c28cf, type: 3}
       propertyPath: m_RootOrder
       value: 22

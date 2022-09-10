@@ -190,6 +190,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3036594735591070524
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2446446291736514356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: face8f19363924097990243e61c0ebf5, type: 3}
 --- !u!1 &2447689761005388292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,6 +1480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bench-old
       objectReference: {fileID: 0}
+    - target: {fileID: 1053102144382520, guid: 12881eca0b9e04a2f893882ef363d69d, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4021074937488796, guid: 12881eca0b9e04a2f893882ef363d69d, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1521,6 +1539,14 @@ PrefabInstance:
     - target: {fileID: 4021074937488796, guid: 12881eca0b9e04a2f893882ef363d69d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64497392037118986, guid: 12881eca0b9e04a2f893882ef363d69d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64497392037118986, guid: 12881eca0b9e04a2f893882ef363d69d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12881eca0b9e04a2f893882ef363d69d, type: 3}
@@ -1692,6 +1718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bike-old
       objectReference: {fileID: 0}
+    - target: {fileID: 1205544531488006, guid: 79bc725118fb64fab8aad1792d5dae58, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4339951649856524, guid: 79bc725118fb64fab8aad1792d5dae58, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1747,6 +1777,14 @@ PrefabInstance:
     - target: {fileID: 4339951649856524, guid: 79bc725118fb64fab8aad1792d5dae58, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -19.272
+      objectReference: {fileID: 0}
+    - target: {fileID: 64319276493779814, guid: 79bc725118fb64fab8aad1792d5dae58, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64319276493779814, guid: 79bc725118fb64fab8aad1792d5dae58, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79bc725118fb64fab8aad1792d5dae58, type: 3}
@@ -2086,6 +2124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: basketball
       objectReference: {fileID: 0}
+    - target: {fileID: 1254740808127770, guid: 0125367fa9edd48c796480c24eef7a6a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4488624534294548, guid: 0125367fa9edd48c796480c24eef7a6a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2144,6 +2186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0125367fa9edd48c796480c24eef7a6a, type: 3}
+--- !u!1 &2446446291736514356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1254740808127770, guid: 0125367fa9edd48c796480c24eef7a6a, type: 3}
+  m_PrefabInstance: {fileID: 2447689762415417902}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2447709419249863226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4488624534294548, guid: 0125367fa9edd48c796480c24eef7a6a, type: 3}

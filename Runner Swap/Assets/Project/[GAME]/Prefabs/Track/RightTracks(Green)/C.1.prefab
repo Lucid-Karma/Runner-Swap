@@ -198,6 +198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: man-cowboy
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011978346650, guid: 527a049fc0f3549e9979a8c8d8b0e4ad, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010015665488, guid: 527a049fc0f3549e9979a8c8d8b0e4ad, type: 3}
       propertyPath: m_RootOrder
       value: 3

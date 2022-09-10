@@ -57,58 +57,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!65 &1285774657909032590
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2503965641773588770}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.993415, y: 2.4396567, z: 2.1766286}
-  m_Center: {x: -0.00000010430816, y: 1.2068493, z: 0.14749828}
---- !u!65 &2359514348692822193
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2503965642238397136}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.993415, y: 2.4396567, z: 2.1766286}
-  m_Center: {x: -0.00000010430816, y: 1.2068493, z: 0.14749828}
---- !u!65 &1673916387909571197
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2503965643290602488}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.9934151, y: 2.4396567, z: 2.1766288}
-  m_Center: {x: -0.000000104308164, y: 1.2068493, z: 0.14750212}
---- !u!65 &9116178635519452469
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2503965643565038953}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.99341476, y: 2.4396567, z: 2.176628}
-  m_Center: {x: -0.00000010430813, y: 1.2068493, z: 0.14749825}
 --- !u!1001 &2502966741651592320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119,6 +67,10 @@ PrefabInstance:
     - target: {fileID: 1000014060781432, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
       propertyPath: m_Name
       value: deer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014060781432, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4000012304205182, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
       propertyPath: m_RootOrder
@@ -174,11 +126,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
---- !u!1 &2503965643290602488 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000014060781432, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
-  m_PrefabInstance: {fileID: 2502966741651592320}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2500173996880810494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012304205182, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
@@ -417,6 +364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: deer (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014060781432, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012304205182, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -474,11 +425,6 @@ PrefabInstance:
 --- !u!4 &2500173996613977967 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012304205182, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
-  m_PrefabInstance: {fileID: 2502966741918089745}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2503965643565038953 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000014060781432, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
   m_PrefabInstance: {fileID: 2502966741918089745}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2502966742003190617
@@ -1244,6 +1190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: deer
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014060781432, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012304205182, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -1310,11 +1260,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
---- !u!1 &2503965642238397136 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000014060781432, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
-  m_PrefabInstance: {fileID: 2502966742741677480}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2500173995824296150 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012304205182, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
@@ -1849,6 +1794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: deer (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014060781432, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012304205182, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -1903,11 +1852,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
---- !u!1 &2503965641773588770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000014060781432, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}
-  m_PrefabInstance: {fileID: 2502966743340572250}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2500173995342764836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012304205182, guid: aa79f8e11b1752f4b81b6a7a84d83070, type: 3}

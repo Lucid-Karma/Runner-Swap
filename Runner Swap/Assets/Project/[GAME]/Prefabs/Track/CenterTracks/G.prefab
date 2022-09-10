@@ -491,6 +491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gate-japan
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011754047716, guid: c04a6cebf9dd14fe68c26544fdf33b4c, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011060386432, guid: c04a6cebf9dd14fe68c26544fdf33b4c, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -1116,6 +1120,10 @@ PrefabInstance:
     - target: {fileID: 1000010972112146, guid: bf778563ab2dd4bdda08ad3f20759cea, type: 3}
       propertyPath: m_Name
       value: gate-red-japan
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010972112146, guid: bf778563ab2dd4bdda08ad3f20759cea, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4000011126474526, guid: bf778563ab2dd4bdda08ad3f20759cea, type: 3}
       propertyPath: m_RootOrder
