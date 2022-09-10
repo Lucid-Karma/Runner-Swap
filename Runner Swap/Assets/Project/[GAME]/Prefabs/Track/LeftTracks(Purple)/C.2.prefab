@@ -1224,9 +1224,10 @@ GameObject:
   - component: {fileID: 3299274125571915637}
   - component: {fileID: 3292227731769587707}
   - component: {fileID: 3284405482057958449}
+  - component: {fileID: 6872944937180893656}
   m_Layer: 0
   m_Name: bow
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1295,6 +1296,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6872944937180893656
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3297522601692119113}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 6398d1619e7274a8681cdc4ba72818ad, type: 3}
 --- !u!1 &3297543392750136058
 GameObject:
   m_ObjectHideFlags: 0
@@ -7475,6 +7490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: holder-katana-empty
       objectReference: {fileID: 0}
+    - target: {fileID: 1288152758306634, guid: a257566e5788e4dc5a5f1e311e4aa57b, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4727365488470312, guid: a257566e5788e4dc5a5f1e311e4aa57b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -7535,6 +7554,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0de74cacf6310c64ca1b6862ba4b219c, type: 2}
+    - target: {fileID: 64782484813017678, guid: a257566e5788e4dc5a5f1e311e4aa57b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64782484813017678, guid: a257566e5788e4dc5a5f1e311e4aa57b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a257566e5788e4dc5a5f1e311e4aa57b, type: 3}
 --- !u!4 &6469525883229780375 stripped

@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: traffic-cone
       objectReference: {fileID: 0}
+    - target: {fileID: 1405028216340584, guid: fb427b0be151145689894947c0466c5f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4563635349623496, guid: fb427b0be151145689894947c0466c5f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -107,6 +111,14 @@ PrefabInstance:
     - target: {fileID: 4563635349623496, guid: fb427b0be151145689894947c0466c5f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64071161838585762, guid: fb427b0be151145689894947c0466c5f, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64071161838585762, guid: fb427b0be151145689894947c0466c5f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb427b0be151145689894947c0466c5f, type: 3}
@@ -730,6 +742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: traffic-cone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405028216340584, guid: fb427b0be151145689894947c0466c5f, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4563635349623496, guid: fb427b0be151145689894947c0466c5f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -785,6 +801,14 @@ PrefabInstance:
     - target: {fileID: 4563635349623496, guid: fb427b0be151145689894947c0466c5f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64071161838585762, guid: fb427b0be151145689894947c0466c5f, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64071161838585762, guid: fb427b0be151145689894947c0466c5f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb427b0be151145689894947c0466c5f, type: 3}

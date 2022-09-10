@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8439041170334605285}
-  - component: {fileID: 6305481349660532087}
   m_Layer: 0
   m_Name: Carriage
   m_TagString: Untagged
@@ -36,19 +35,6 @@ Transform:
   m_Father: {fileID: 8439041171366950379}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 80.619, y: 0, z: 0}
---- !u!65 &6305481349660532087
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8439041170334605284}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.58152, y: 5.700728, z: 2.4312353}
-  m_Center: {x: 0.26726192, y: 1.7287978, z: 0.64510816}
 --- !u!1 &8439041171366950378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,6 +1188,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: carriage (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 192716, guid: 039eee93a5a2d20498d8ee9905b66632, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 437882, guid: 039eee93a5a2d20498d8ee9905b66632, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1292,6 +1282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrel01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 150946, guid: ef4fcc24e9a681a45bf87bec627dd9fd, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 411200, guid: ef4fcc24e9a681a45bf87bec627dd9fd, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1347,6 +1341,14 @@ PrefabInstance:
     - target: {fileID: 411200, guid: ef4fcc24e9a681a45bf87bec627dd9fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64532576498990032, guid: ef4fcc24e9a681a45bf87bec627dd9fd, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64532576498990032, guid: ef4fcc24e9a681a45bf87bec627dd9fd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4fcc24e9a681a45bf87bec627dd9fd, type: 3}
@@ -1440,6 +1442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrel01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 150946, guid: ef4fcc24e9a681a45bf87bec627dd9fd, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 411200, guid: ef4fcc24e9a681a45bf87bec627dd9fd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1495,6 +1501,14 @@ PrefabInstance:
     - target: {fileID: 411200, guid: ef4fcc24e9a681a45bf87bec627dd9fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64532576498990032, guid: ef4fcc24e9a681a45bf87bec627dd9fd, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64532576498990032, guid: ef4fcc24e9a681a45bf87bec627dd9fd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4fcc24e9a681a45bf87bec627dd9fd, type: 3}

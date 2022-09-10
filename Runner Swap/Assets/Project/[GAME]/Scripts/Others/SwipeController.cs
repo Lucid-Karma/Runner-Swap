@@ -77,15 +77,17 @@ public class SwipeController : MonoBehaviour
                             isItCenter = false;
                             isItLeft = false;
                             isItRight = true;
+                            EventManager.OnRightMove.Invoke();
                         }
                         else if(isItLeft)
                         {
                             isItRight = false;
                             isItLeft = false;
                             isItCenter = true;
+                            EventManager.OnCenterMove.Invoke();
                         }
 
-                        EventManager.OnRightMove.Invoke();
+                        //EventManager.OnRightMove.Invoke();
                     }
                     else if(differance <= -100 && heightChange < 250.0f)
                     {
@@ -94,16 +96,17 @@ public class SwipeController : MonoBehaviour
                             isItCenter = false;
                             isItRight = false;
                             isItLeft = true;
+                            EventManager.OnLeftMove.Invoke();
                         }
                         else if(isItRight)
                         {
                             isItRight = false;
                             isItLeft = false;
                             isItCenter = true;
-                            //kac = 2;
+                            EventManager.OnCenterMove.Invoke();
                         }
 
-                        EventManager.OnLeftMove.Invoke();
+                        //EventManager.OnLeftMove.Invoke();
                     }
 
                     if(heightChange >= 250.0f && transform.position.y == 0)
