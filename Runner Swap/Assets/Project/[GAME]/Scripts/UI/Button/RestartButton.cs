@@ -6,17 +6,9 @@ using UnityEngine.UI;
 
 public class RestartButton : MonoBehaviour
 {
-    private void OnEnable() 
-    {
-        EventManager.OnGameStart.AddListener(Restart);
-    }
-    private void OnDisable() 
-    {
-        EventManager.OnGameStart.RemoveListener(Restart);    
-    }
     public void Restart()
     {
-        SceneManager.LoadScene( SceneManager.GetActiveScene().name );
+        SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex + 1 );
         EventManager.OnRestart.Invoke();
     }
 }

@@ -21,6 +21,8 @@ public class SwipeController : MonoBehaviour
         }
     }
 
+    private Animator animator;
+
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
 
@@ -40,6 +42,7 @@ public class SwipeController : MonoBehaviour
     void Start()
     {
         DOTween.Init();
+        animator = GetComponent<Animator>();
     }
 
     public Vector2 direction;
@@ -112,7 +115,9 @@ public class SwipeController : MonoBehaviour
                     if(heightChange >= 250.0f && transform.position.y == 0)
                     {
                         duration = 1.2f;
+                        animator.SetBool("jumping", true);
                         Jump(duration);
+                        animator.SetBool("jumping", false);
                         //transform.DOLocalMove(new Vector3(0, 4, 0), .6f);//.OnComplete(()=> {transform.DOLocalMove(new Vector3(0, 1, 0), .3f);});
                     }
                     /*else if(heightChange < 0)
