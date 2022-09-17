@@ -20,18 +20,18 @@ public class ScoreTextController : MonoBehaviour
 
     private void OnEnable()
     {
-        //EventManager.OnSthHappen.AddListener(UpdateScoreText);
+        EventManager.OnCoinPickUp.AddListener(UpdateScoreText);
     }
 
     private void OnDisable()
     {
-        //EventManager.OnSthHappen.RemoveListener(UpdateScoreText); 
+        EventManager.OnCoinPickUp.RemoveListener(UpdateScoreText); 
     }
 
     public int point = 0;
     private void UpdateScoreText()
     {
-        //point = SomeClass.point;
-        //ScoreText.text = "SCORE " + point;
+        point = CharacterTriggerController.point;
+        ScoreText.text = "" + point;
     }
 }
