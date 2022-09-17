@@ -25,8 +25,13 @@ public class GameManager : Singleton<GameManager>
         EventManager.OnGameEnd.Invoke();
     }
 
+    void Awake()
+    {
+        IsGameStarted = true;
+        StartGame();
+    }
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
         EventManager.OnRestart.AddListener(ContinueGame);
         EventManager.OnLevelFail.AddListener(PauseGame);
@@ -39,15 +44,5 @@ public class GameManager : Singleton<GameManager>
         EventManager.OnLevelFail.RemoveListener(PauseGame);
         EventManager.OnLevelSuccess.RemoveListener(PauseGame);
         //Timer.OnTimeOut -= PauseGame;
-    }
-
-    void PauseGame()
-    {
-        Time.timeScale = 0.5f;
-    }
-
-    void ContinueGame()
-    {
-        Time.timeScale = 1;
-    }
+    }*/
 }

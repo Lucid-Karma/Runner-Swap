@@ -34,7 +34,7 @@ public class Coin : MonoBehaviour
         EventManager.OnLeftMove.AddListener(SpecificPosl);
         EventManager.OnLevelStart.AddListener(GetCoinFirstTime);
         EventManager.OnPlayerStartedRunning.AddListener(() => canMoveTracks = true);
-        EventManager.OnPreLevelFail.AddListener(() => canMoveTracks = false);
+        //EventManager.OnPreLevelFail.AddListener(() => canMoveTracks = false);
         TrackManager.OnTrackCreate += GetCoin;
     }
 
@@ -44,7 +44,7 @@ public class Coin : MonoBehaviour
         EventManager.OnLeftMove.RemoveListener(SpecificPosl);
         EventManager.OnLevelStart.RemoveListener(GetCoinFirstTime);
         EventManager.OnPlayerStartedRunning.RemoveListener(() => canMoveTracks = true);
-        EventManager.OnPreLevelFail.RemoveListener(() => canMoveTracks = false);
+        //EventManager.OnPreLevelFail.RemoveListener(() => canMoveTracks = false);
         TrackManager.OnTrackCreate -= GetCoin;
     }
 
