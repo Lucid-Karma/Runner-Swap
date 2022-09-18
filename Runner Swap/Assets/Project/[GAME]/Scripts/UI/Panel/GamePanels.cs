@@ -4,44 +4,46 @@ using UnityEngine;
 
 public class GamePanels : Panel
 {
-    public Panel GameStartPanel;
-    public Panel GameEndPanel;
+    public Panel InGameInfoPanel;
+    public Panel PauseMenuPanel;
     //public Panel //BlurPanel;
 
     private void Awake() 
     {
-        GameStartPanel.ShowPanel();
-        GameEndPanel.HidePanel();
+        InGameInfoPanel.HidePanel();
+        PauseMenuPanel.HidePanel();
         //BlurPanel.HidePanel();
     }
 
     private void OnEnable()
     {
-        EventManager.OnLevelFail.AddListener(InitializeGameEndPanel);
+        EventManager.OnLevelPause.AddListener(InitializePauseMenuPanel);
         //EventManager.OnLevelSuccess.AddListener(InitializeLevelSuccessPanel);
-        EventManager.OnGameStart.AddListener(InitializeGameStartPanel);
+        EventManager.OnLevelStart.AddListener(InitializeInGameInfoPanel);
+        EventManager.OnLevelResume.AddListener(InitializeInGameInfoPanel);
     }
 
     private void OnDisable()
     {
-        EventManager.OnLevelFail.RemoveListener(InitializeGameEndPanel);
+        EventManager.OnLevelPause.RemoveListener(InitializePauseMenuPanel);
         //EventManager.OnLevelSuccess.RemoveListener(InitializeLevelSuccessPanel);
-        EventManager.OnGameStart.RemoveListener(InitializeGameStartPanel);
+        EventManager.OnLevelStart.RemoveListener(InitializeInGameInfoPanel);
+        EventManager.OnLevelResume.RemoveListener(InitializeInGameInfoPanel);
     }
 
-    private void InitializeGameEndPanel()
+    private void InitializePauseMenuPanel()
     {
-        GameStartPanel.HidePanel();
+        InGameInfoPanel.HidePanel();
         //BlurPanel.ShowPanel();
-        GameEndPanel.ShowPanel();
+        PauseMenuPanel.ShowPanel();
         ShowPanel();
     }
 
-    private void InitializeGameStartPanel()
+    private void InitializeInGameInfoPanel()
     {
-        GameStartPanel.ShowPanel();
+        InGameInfoPanel.ShowPanel();
         //BlurPanel.ShowPanel();
-        GameEndPanel.HidePanel();
+        PauseMenuPanel.HidePanel();
         ShowPanel();
     }
 }

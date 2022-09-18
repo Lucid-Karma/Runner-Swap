@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class HealthTextController : MonoBehaviour
 {
@@ -39,13 +38,6 @@ public class HealthTextController : MonoBehaviour
     {
         health = CharacterTriggerController.health;
 
-        if(health != 0)
-            HealthText.text = "x" + health;
-        else if(health == 0)
-        {
-            EventManager.OnLevelFail.Invoke();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-        }
-           
+        HealthText.text = "x" + health;
     }
 }

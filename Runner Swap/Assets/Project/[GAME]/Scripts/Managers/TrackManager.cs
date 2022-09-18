@@ -27,7 +27,7 @@ public class TrackManager : Singleton<TrackManager>
 
     private void OnEnable()
     {
-        EventManager.OnLevelStart.AddListener(CreateTrackFirst);
+        //EventManager.OnLevelStart.AddListener(CreateTrackFirst);
         EventManager.OnPlayerStartedRunning.AddListener(() => canMoveTracks = true);
         //EventManager.OnPreLevelFail.AddListener(() => canMoveTracks = false);
         EventManager.OnGameStart.AddListener(() => Debug.Log("has been started"));
@@ -35,7 +35,7 @@ public class TrackManager : Singleton<TrackManager>
 
     private void OnDisable()
     {
-        EventManager.OnLevelStart.RemoveListener(CreateTrackFirst);
+        //EventManager.OnLevelStart.RemoveListener(CreateTrackFirst);
         EventManager.OnPlayerStartedRunning.RemoveListener(() => canMoveTracks = true);
         //EventManager.OnPreLevelFail.RemoveListener(() => canMoveTracks = false);
         EventManager.OnGameStart.RemoveListener(() => Debug.Log("has been started"));
