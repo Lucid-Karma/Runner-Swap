@@ -1657,7 +1657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8453385521399309728, guid: 0e16efb33490a8d488cadcbf7ecea7a7, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8453385521399309728, guid: 0e16efb33490a8d488cadcbf7ecea7a7, type: 3}
       propertyPath: m_IsTrigger
@@ -1676,8 +1676,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8480512372432283550, guid: 0e16efb33490a8d488cadcbf7ecea7a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8480512372432283550, guid: 0e16efb33490a8d488cadcbf7ecea7a7, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8480710223273121538, guid: 0e16efb33490a8d488cadcbf7ecea7a7, type: 3}
       propertyPath: m_TagString
