@@ -9,7 +9,8 @@ public static class EventManager
     public static UnityEvent OnGameEnd = new UnityEvent();
 
     public static UnityEvent OnLevelStart = new UnityEvent();
-    public static UnityEvent OnLevelContine = new UnityEvent();
+    public static UnityEvent OnLevelPause = new UnityEvent();
+    public static UnityEvent OnLevelResume = new UnityEvent();
     public static UnityEvent OnLevelFinish = new UnityEvent();
 
     public static UnityEvent OnLevelSuccess = new UnityEvent();

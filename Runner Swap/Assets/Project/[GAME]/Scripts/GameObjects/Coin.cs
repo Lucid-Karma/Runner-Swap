@@ -26,13 +26,15 @@ public class Coin : MonoBehaviour
 
         coinPosX = new int[] {-3, 0, 3};
         coinPosY = new int[] {1, 4};
+
+        GetCoinFirstTime();
     }
 
     private void OnEnable()
     {
         EventManager.OnRightMove.AddListener(SpecificPosr);
         EventManager.OnLeftMove.AddListener(SpecificPosl);
-        EventManager.OnLevelStart.AddListener(GetCoinFirstTime);
+        //EventManager.OnLevelStart.AddListener(GetCoinFirstTime);
         EventManager.OnPlayerStartedRunning.AddListener(() => canMoveTracks = true);
         //EventManager.OnPreLevelFail.AddListener(() => canMoveTracks = false);
         TrackManager.OnTrackCreate += GetCoin;
@@ -42,7 +44,7 @@ public class Coin : MonoBehaviour
     {
         EventManager.OnRightMove.RemoveListener(SpecificPosr);
         EventManager.OnLeftMove.RemoveListener(SpecificPosl);
-        EventManager.OnLevelStart.RemoveListener(GetCoinFirstTime);
+        //EventManager.OnLevelStart.RemoveListener(GetCoinFirstTime);
         EventManager.OnPlayerStartedRunning.RemoveListener(() => canMoveTracks = true);
         //EventManager.OnPreLevelFail.RemoveListener(() => canMoveTracks = false);
         TrackManager.OnTrackCreate -= GetCoin;

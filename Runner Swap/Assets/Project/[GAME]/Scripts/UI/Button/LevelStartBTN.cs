@@ -8,11 +8,12 @@ public class LevelStartBTN : MonoBehaviour
     public void StartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        EventManager.OnLevelStart.Invoke();
+        //EventManager.OnLevelStart.Invoke();
     }
 
     public void StartRunning()
     {
         EventManager.OnPlayerStartedRunning.Invoke();
+        EventManager.OnLevelStart.Invoke();
     }
 }
