@@ -39,6 +39,15 @@ public class SwipeController : MonoBehaviour
         isItUp = false;
     }
 
+    void OnEnable()
+    {
+        EventManager.OnPlayerStartedRunning.AddListener(StartRun);
+    }
+    void OnDisable()
+    {
+        EventManager.OnPlayerStartedRunning.RemoveListener(StartRun);
+    }
+
     void Start()
     {
         DOTween.Init();
@@ -115,9 +124,11 @@ public class SwipeController : MonoBehaviour
                     if(heightChange >= 250.0f && transform.position.y == 0)
                     {
                         duration = 1.2f;
-                        animator.SetBool("jumping", true);
+                        EventManager.OnCharacterJump.Invoke();
+                        animator.SetBool("isJumping", true);
                         Jump(duration);
-                        animator.SetBool("jumping", false);
+                        //animator.SetBool("isJumping", false);
+                        StartCoroutine(StopJumpAnimation());
                         //transform.DOLocalMove(new Vector3(0, 4, 0), .6f);//.OnComplete(()=> {transform.DOLocalMove(new Vector3(0, 1, 0), .3f);});
                     }
                     /*else if(heightChange < 0)
@@ -136,5 +147,17 @@ public class SwipeController : MonoBehaviour
     {
         return transform.DOJump(new Vector3(0, 2.0f, 0), 3.0f, 1, s).SetEase(Ease.InOutSine)//;//1.2f power and 1.2f duration
                     .OnPlay(()=>{transform.DOLocalMove(transform.position + Vector3.zero, .25f);});
+    }
+
+    void StartRun()
+    {
+        animator.SetBool("isRuning", true);
+    }
+
+    IEnumerator StopJumpAnimation()
+    {
+        //yield return null;
+        yield return new WaitForSeconds(1.2f);
+        animator.SetBool("isJumping", false);
     }
 }

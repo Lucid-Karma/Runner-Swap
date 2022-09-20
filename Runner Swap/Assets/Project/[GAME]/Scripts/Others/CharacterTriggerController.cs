@@ -32,7 +32,7 @@ public class CharacterTriggerController : MonoBehaviour
             if(health == 0)
             {
                 StartCoroutine(WaitBeforeFail());
-                //EventManager.OnLevelFail.Invoke();
+                EventManager.OnLevelFail.Invoke();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
