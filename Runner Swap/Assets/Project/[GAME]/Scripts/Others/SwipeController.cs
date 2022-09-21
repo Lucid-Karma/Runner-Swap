@@ -39,14 +39,14 @@ public class SwipeController : MonoBehaviour
         isItUp = false;
     }
 
-    void OnEnable()
+    /*void OnEnable()
     {
         EventManager.OnPlayerStartedRunning.AddListener(StartRun);
     }
     void OnDisable()
     {
         EventManager.OnPlayerStartedRunning.RemoveListener(StartRun);
-    }
+    }*/
 
     void Start()
     {
@@ -125,10 +125,10 @@ public class SwipeController : MonoBehaviour
                     {
                         duration = 1.2f;
                         EventManager.OnCharacterJump.Invoke();
-                        animator.SetBool("isJumping", true);
+                        //animator.SetBool("isJumping", true);
                         Jump(duration);
                         //animator.SetBool("isJumping", false);
-                        StartCoroutine(StopJumpAnimation());
+                        //StartCoroutine(StopJumpAnimation());
                         //transform.DOLocalMove(new Vector3(0, 4, 0), .6f);//.OnComplete(()=> {transform.DOLocalMove(new Vector3(0, 1, 0), .3f);});
                     }
                     /*else if(heightChange < 0)
@@ -149,7 +149,7 @@ public class SwipeController : MonoBehaviour
                     .OnPlay(()=>{transform.DOLocalMove(transform.position + Vector3.zero, .25f);});
     }
 
-    void StartRun()
+    /*void StartRun()
     {
         animator.SetBool("isRuning", true);
     }
@@ -159,5 +159,5 @@ public class SwipeController : MonoBehaviour
         //yield return null;
         yield return new WaitForSeconds(1.2f);
         animator.SetBool("isJumping", false);
-    }
+    }*/
 }

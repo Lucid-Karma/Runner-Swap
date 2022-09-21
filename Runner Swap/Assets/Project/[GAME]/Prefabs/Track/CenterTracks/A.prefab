@@ -1754,6 +1754,8 @@ GameObject:
   - component: {fileID: 3017365660741323624}
   - component: {fileID: 3017365660741323625}
   - component: {fileID: 3017365660741323638}
+  - component: {fileID: 8351061623054818248}
+  - component: {fileID: 7999745896158655372}
   m_Layer: 0
   m_Name: gate-japan (3)
   m_TagString: Obstacle
@@ -1837,12 +1839,38 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3017365660741323636}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 901076da5f5fc495b93633bddca3129b, type: 3}
+--- !u!65 &8351061623054818248
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3017365660741323636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.079263, y: 2.9032345, z: 9.000002}
+  m_Center: {x: -5.9603834, y: -0.54834247, z: -0.00003492878}
+--- !u!65 &7999745896158655372
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3017365660741323636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.021744, y: 3.292204, z: 9.000002}
+  m_Center: {x: 5.989138, y: -0.3538524, z: -0.00003468877}
 --- !u!1 &3017365660788008861
 GameObject:
   m_ObjectHideFlags: 0

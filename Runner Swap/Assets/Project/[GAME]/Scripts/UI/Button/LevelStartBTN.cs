@@ -13,7 +13,8 @@ public class LevelStartBTN : MonoBehaviour
 
     public void StartRunning()
     {
-        EventManager.OnPlayerStartedRunning.Invoke();
         EventManager.OnLevelStart.Invoke();
+        EventManager.OnPlayerStartedRunning.Invoke();
+        //EventManager.OnLevelStart.Invoke();
     }
 }
