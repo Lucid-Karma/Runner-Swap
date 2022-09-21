@@ -16,33 +16,33 @@ public class CharacterTriggerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "coin")
+        if(other.gameObject.CompareTag("coin"))
         {
             point ++;
 
             EventManager.OnCoinPickUp.Invoke();
             Coin.SharedInstance.DisposeOnTrigger(other);
         }
-        else if(other.gameObject.tag == "Obstacle")
+        else if(other.gameObject.CompareTag("Obstacle"))
         {
             health --;
 
-            EventManager.OnPreLevelFail.Invoke();
+            //if(health > 0)
+                EventManager.OnPreLevelFail.Invoke();
 
-            if(health == 0)
+            if(health <= 0)
             {
                 StartCoroutine(WaitBeforeFail());
-                EventManager.OnLevelFail.Invoke();
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
 
     IEnumerator WaitBeforeFail()
     {
-        //yield return null;
-        yield return new WaitForSeconds(2.5f);
+        Debug.Log("wait");
+        yield return new WaitForSeconds(1.5f);
         Debug.Log("waited");
         EventManager.OnLevelFail.Invoke();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

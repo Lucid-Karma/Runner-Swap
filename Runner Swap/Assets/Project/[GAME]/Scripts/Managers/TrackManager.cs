@@ -13,6 +13,7 @@ public class TrackManager : Singleton<TrackManager>
     public float speed;
     [SerializeField]
     private bool canMoveTracks;
+    public bool isLevelStarted;
     public Vector3 createPos;
     public Vector3 offset;
     public Vector3 parentRefer;
@@ -29,7 +30,7 @@ public class TrackManager : Singleton<TrackManager>
     {
         //EventManager.OnLevelStart.AddListener(CreateTrackFirst);
         EventManager.OnPlayerStartedRunning.AddListener(() => canMoveTracks = true);
-        //EventManager.OnPreLevelFail.AddListener(() => canMoveTracks = false);
+        EventManager.OnLevelFail.AddListener(() => canMoveTracks = false);
         EventManager.OnGameStart.AddListener(() => Debug.Log("has been started"));
     }
 
@@ -37,7 +38,7 @@ public class TrackManager : Singleton<TrackManager>
     {
         //EventManager.OnLevelStart.RemoveListener(CreateTrackFirst);
         EventManager.OnPlayerStartedRunning.RemoveListener(() => canMoveTracks = true);
-        //EventManager.OnPreLevelFail.RemoveListener(() => canMoveTracks = false);
+        EventManager.OnLevelFail.RemoveListener(() => canMoveTracks = false);
         EventManager.OnGameStart.RemoveListener(() => Debug.Log("has been started"));
     }
 
@@ -55,6 +56,7 @@ public class TrackManager : Singleton<TrackManager>
         }
 
         CreateTrackFirst();
+        isLevelStarted = true;
     }
 
     void Start()

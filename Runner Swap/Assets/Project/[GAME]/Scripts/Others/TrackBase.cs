@@ -31,14 +31,14 @@ public abstract class TrackBase : MonoBehaviour
     {
         EventManager.OnIndexLoad.AddListener(CreateTrack);
         EventManager.OnPlayerStartedRunning.AddListener(() => canMoveTracks = true);
-        //EventManager.OnPreLevelFail.AddListener(() => canMoveTracks = false);
+        EventManager.OnLevelFail.AddListener(() => canMoveTracks = false);
     }
 
     private void OnDisable()
     {
         EventManager.OnIndexLoad.RemoveListener(CreateTrack);
         EventManager.OnPlayerStartedRunning.RemoveListener(() => canMoveTracks = true);
-        //EventManager.OnPreLevelFail.RemoveListener(() => canMoveTracks = false);
+        EventManager.OnLevelFail.RemoveListener(() => canMoveTracks = false);
     }
 
     void Awake()
