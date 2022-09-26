@@ -21,7 +21,6 @@ public class SwipeController : MonoBehaviour
         }
     }
 
-    private Animator animator;
 
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
@@ -41,102 +40,109 @@ public class SwipeController : MonoBehaviour
 
     /*void OnEnable()
     {
-        EventManager.OnPlayerStartedRunning.AddListener(StartRun);
+        EventManager.OnRestart.AddListener(RestartValues);
     }
     void OnDisable()
     {
-        EventManager.OnPlayerStartedRunning.RemoveListener(StartRun);
+        EventManager.OnRestart.RemoveListener(RestartValues);
+    }
+
+    void RestartValues()
+    {
+        isItRight = false;
+        isItLeft = false;
+        isItCenter = true;
+        isItUp = false;
     }*/
 
     void Start()
     {
         DOTween.Init();
-        animator = GetComponent<Animator>();
     }
 
     public Vector2 direction;
-    //public static float kac;
     void Update()
     {
+
         if(transform.position.y <= 0f)
         {
             transform.position = Vector3.zero;
         }
-        
-        if (Input.touchCount > 0)
+
+        if(GameManager.Instance.IsLevelStarted)
         {
-            Touch touch = Input.GetTouch(0);
-
-            switch (touch.phase)
+            if (Input.touchCount > 0)
             {
-                case TouchPhase.Began:
-                    startTouchPosition = touch.position;
-                    break;
+                Touch touch = Input.GetTouch(0);
 
-                case TouchPhase.Moved:
-                    direction = touch.position - startTouchPosition;
-                    break;
+                switch (touch.phase)
+                {
+                    case TouchPhase.Began:
+                        startTouchPosition = touch.position;
+                        break;
 
-                case TouchPhase.Ended:
-                    endTouchPosition = touch.position;
-                    heightChange = endTouchPosition.y - startTouchPosition.y;
-                    differance = endTouchPosition.x - startTouchPosition.x;
+                    case TouchPhase.Moved:
+                        direction = touch.position - startTouchPosition;
+                        break;
 
-                    if(differance >= 100 && heightChange < 250.0f)
-                    {
-                        if(isItCenter)
+                    case TouchPhase.Ended:
+                        endTouchPosition = touch.position;
+                        heightChange = endTouchPosition.y - startTouchPosition.y;
+                        differance = endTouchPosition.x - startTouchPosition.x;
+
+                        if(differance >= 100 && heightChange < 250.0f)
                         {
-                            isItCenter = false;
-                            isItLeft = false;
-                            isItRight = true;
-                            //EventManager.OnRightMove.Invoke();
+                            if(isItCenter)
+                            {
+                                isItCenter = false;
+                                isItLeft = false;
+                                isItRight = true;
+                                //EventManager.OnRightMove.Invoke();
+                            }
+                            else if(isItLeft)
+                            {
+                                isItRight = false;
+                                isItLeft = false;
+                                isItCenter = true;
+                                //EventManager.OnCenterMove.Invoke();
+                            }
+
+                            EventManager.OnRightMove.Invoke();
                         }
-                        else if(isItLeft)
+                        else if(differance <= -100 && heightChange < 250.0f)
                         {
-                            isItRight = false;
-                            isItLeft = false;
-                            isItCenter = true;
-                            //EventManager.OnCenterMove.Invoke();
+                            if(isItCenter)
+                            {
+                                isItCenter = false;
+                                isItRight = false;
+                                isItLeft = true;
+                                //EventManager.OnLeftMove.Invoke();
+                            }
+                            else if(isItRight)
+                            {
+                                isItRight = false;
+                                isItLeft = false;
+                                isItCenter = true;
+                                //EventManager.OnCenterMove.Invoke();
+                            }
+
+                            EventManager.OnLeftMove.Invoke();
                         }
 
-                        EventManager.OnRightMove.Invoke();
-                    }
-                    else if(differance <= -100 && heightChange < 250.0f)
-                    {
-                        if(isItCenter)
+                        if(heightChange >= 250.0f && transform.position.y == 0)
                         {
-                            isItCenter = false;
-                            isItRight = false;
-                            isItLeft = true;
-                            //EventManager.OnLeftMove.Invoke();
+                            duration = 1.2f;
+                            EventManager.OnCharacterJump.Invoke();
+                            Jump(duration);
+                            //transform.DOLocalMove(new Vector3(0, 4, 0), .6f);//.OnComplete(()=> {transform.DOLocalMove(new Vector3(0, 1, 0), .3f);});
                         }
-                        else if(isItRight)
+                        /*else if(heightChange < 0)
                         {
-                            isItRight = false;
-                            isItLeft = false;
-                            isItCenter = true;
-                            //EventManager.OnCenterMove.Invoke();
-                        }
-
-                        EventManager.OnLeftMove.Invoke();
-                    }
-
-                    if(heightChange >= 250.0f && transform.position.y == 0)
-                    {
-                        duration = 1.2f;
-                        EventManager.OnCharacterJump.Invoke();
-                        //animator.SetBool("isJumping", true);
-                        Jump(duration);
-                        //animator.SetBool("isJumping", false);
-                        //StartCoroutine(StopJumpAnimation());
-                        //transform.DOLocalMove(new Vector3(0, 4, 0), .6f);//.OnComplete(()=> {transform.DOLocalMove(new Vector3(0, 1, 0), .3f);});
-                    }
-                    /*else if(heightChange < 0)
-                    {
-                        duration = 0.1f;
-                        transform.DOLocalMoveY(0, duration);
-                    }*/
-                    break;
+                            duration = 0.1f;
+                            transform.DOLocalMoveY(0, duration);
+                        }*/
+                        break;
+                }
             }
         }
     

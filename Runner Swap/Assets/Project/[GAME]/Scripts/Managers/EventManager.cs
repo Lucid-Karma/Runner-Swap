@@ -27,8 +27,10 @@ public static class EventManager
     public static UnityEvent OnCenterMove = new UnityEvent();
     public static UnityEvent OnCharacterJump = new UnityEvent();
     public static UnityEvent OnIndexLoad = new UnityEvent();
+    public static UnityEvent OnPreDieAnimate = new UnityEvent();
 
     public static UnityEvent OnPlayerStartedRunning = new UnityEvent();
+    //public static UnityEvent OnPlayerEndedRunning = new UnityEvent();
     public static UnityEvent OnPlayerDataUpdated = new UnityEvent();
 
     public static UnityEvent OnMusicOn = new UnityEvent();
