@@ -13,14 +13,16 @@ public class CharacterAnimationController : MonoBehaviour
     {
         EventManager.OnLevelStart.AddListener(StartRun);
         EventManager.OnCharacterJump.AddListener(() => InvokeTrigger("Jump"));
-        EventManager.OnPreLevelFail.AddListener(() => InvokeTrigger("Stumble"));
+        EventManager.OnPreDieAnimate.AddListener(() => InvokeTrigger("Stumble"));
+        EventManager.OnLevelFail.AddListener(EndRun);
         EventManager.OnLevelFail.AddListener(() => InvokeTrigger("Die"));
     }
     void OnDisable()
     {
         EventManager.OnLevelStart.RemoveListener(StartRun);
         EventManager.OnCharacterJump.RemoveListener(() => InvokeTrigger("Jump"));
-        EventManager.OnPreLevelFail.RemoveListener(() => InvokeTrigger("Stumble"));
+        EventManager.OnPreDieAnimate.RemoveListener(() => InvokeTrigger("Stumble"));
+        EventManager.OnLevelFail.RemoveListener(EndRun);
         EventManager.OnLevelFail.RemoveListener(() => InvokeTrigger("Die"));
     }
 
@@ -38,6 +40,10 @@ public class CharacterAnimationController : MonoBehaviour
     void StartRun()
     {
         Animator.SetBool("isRunning", true);
+    }
+    void EndRun()
+    {
+        Animator.SetBool("isRunning", false);
     }
 
     private void InvokeTrigger(string value)

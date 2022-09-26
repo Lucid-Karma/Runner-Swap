@@ -14,7 +14,7 @@ public class Coin : MonoBehaviour
     public Vector3 createPos;
     public Vector3 parentRefer;
     public Vector3 offset;
-    public bool canMoveTracks;
+    public bool canMoveCoins;
     public int targetCoinCount;
     public int[] coinPosX;
     public int[] coinPosY;
@@ -35,8 +35,8 @@ public class Coin : MonoBehaviour
         EventManager.OnRightMove.AddListener(SpecificPosr);
         EventManager.OnLeftMove.AddListener(SpecificPosl);
         //EventManager.OnLevelStart.AddListener(GetCoinFirstTime);
-        EventManager.OnPlayerStartedRunning.AddListener(() => canMoveTracks = true);
-        //EventManager.OnPreLevelFail.AddListener(() => canMoveTracks = false);
+        EventManager.OnPlayerStartedRunning.AddListener(() => canMoveCoins = true);
+        EventManager.OnLevelFail.AddListener(() => canMoveCoins = false);
         TrackManager.OnTrackCreate += GetCoin;
     }
 
@@ -45,8 +45,8 @@ public class Coin : MonoBehaviour
         EventManager.OnRightMove.RemoveListener(SpecificPosr);
         EventManager.OnLeftMove.RemoveListener(SpecificPosl);
         //EventManager.OnLevelStart.RemoveListener(GetCoinFirstTime);
-        EventManager.OnPlayerStartedRunning.RemoveListener(() => canMoveTracks = true);
-        //EventManager.OnPreLevelFail.RemoveListener(() => canMoveTracks = false);
+        EventManager.OnPlayerStartedRunning.RemoveListener(() => canMoveCoins = true);
+        EventManager.OnLevelFail.RemoveListener(() => canMoveCoins = false);
         TrackManager.OnTrackCreate -= GetCoin;
     }
 
@@ -64,7 +64,7 @@ public class Coin : MonoBehaviour
 
     void Update()
     {
-        if (!canMoveTracks)
+        if (!canMoveCoins)
             return;
 
         MoveCoinObjects();

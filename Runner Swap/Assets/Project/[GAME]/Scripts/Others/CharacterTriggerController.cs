@@ -27,22 +27,20 @@ public class CharacterTriggerController : MonoBehaviour
         {
             health --;
 
-            //if(health > 0)
-                EventManager.OnPreLevelFail.Invoke();
+            EventManager.OnPreLevelFail.Invoke();
+
+            if(health >= 1)
+                EventManager.OnPreDieAnimate.Invoke();
 
             if(health <= 0)
-            {
                 StartCoroutine(WaitBeforeFail());
-            }
         }
     }
 
     IEnumerator WaitBeforeFail()
     {
-        Debug.Log("wait");
-        yield return new WaitForSeconds(1.5f);
-        Debug.Log("waited");
         EventManager.OnLevelFail.Invoke();
+        yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
