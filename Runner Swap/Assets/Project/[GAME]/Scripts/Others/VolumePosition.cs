@@ -25,8 +25,6 @@ public class VolumePosition : MonoBehaviour
     }
     private void Left()
     {
-        //transform.position = new Vector3(97, 0, 0);
-
         if(SwipeController.isItRight)
             {
                 transform.position = Vector3.left * 97;

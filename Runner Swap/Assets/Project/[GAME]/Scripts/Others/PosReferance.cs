@@ -2,27 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using DG.Tweening;
 
 public class PosReferance : MonoBehaviour
 {
     public static Vector3 mainPosition;
     public static Vector3 coinPosition;
 
+    
     void OnEnable()
     {
         EventManager.OnRightMove.AddListener(Pos);
         EventManager.OnLeftMove.AddListener(Pos);
+        EventManager.OnLevelFail.AddListener(ResetPos);
     }
     void OnDisable()
     {
         EventManager.OnRightMove.RemoveListener(Pos);
         EventManager.OnLeftMove.RemoveListener(Pos);
-    }
-
-    void Start()
-    {
-        DOTween.Init();
+        EventManager.OnLevelFail.RemoveListener(ResetPos);
     }
 
     public void Pos()
@@ -43,6 +40,10 @@ public class PosReferance : MonoBehaviour
                 mainPosition = Vector3.zero;// - Vector3.up;
                 coinPosition = Vector3.zero;// - Vector3.up;
             }
-        
+    }
+
+    void ResetPos()
+    {
+        mainPosition = Vector3.zero;
     }
 }

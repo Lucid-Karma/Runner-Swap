@@ -11,7 +11,7 @@ public class CharacterTriggerController : MonoBehaviour
     void Awake()
     {
         point = 0;
-        health = 3;
+        health = 5;
     }
 
     void OnTriggerEnter(Collider other)
