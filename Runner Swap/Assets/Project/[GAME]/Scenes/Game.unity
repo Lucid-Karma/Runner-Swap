@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: x3
+  m_text: x5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa328c1ae3ffb6b4583cf371153b0be6, type: 2}
   m_sharedMaterial: {fileID: 21918420405216288, guid: fa328c1ae3ffb6b4583cf371153b0be6, type: 2}
@@ -1202,7 +1202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d4144020066bd4ba7cd93e0419d0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 5
 --- !u!1001 &502255626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2257,8 +2257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerColor: {r: 0.69411767, g: 0.20000002, b: 0.23529413, a: 1}
-  leftColor: {r: 0.103773594, g: 0.1022072, b: 0.1022072, a: 1}
-  rightColor: {r: 0.50537556, g: 0.5998133, b: 0.8584906, a: 1}
+  leftColor: {r: 0.7254902, g: 0.3019608, b: 0.8980392, a: 1}
+  rightColor: {r: 0.29803923, g: 0.84705883, b: 1, a: 1}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4084,6 +4084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1efdb1d536b81a4a9445f835d391888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jump: {x: 0, y: 0, z: 0}
+  jumpForce: 20
   direction: {x: 0, y: 0}
   duration: 0
 --- !u!114 &1707570177
@@ -4529,6 +4531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1efdb1d536b81a4a9445f835d391888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jump: {x: 0, y: 0, z: 0}
+  jumpForce: 2
   direction: {x: 0, y: 0}
   duration: 0
 --- !u!54 &1958917550

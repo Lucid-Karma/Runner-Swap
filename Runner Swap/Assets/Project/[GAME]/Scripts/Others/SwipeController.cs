@@ -38,26 +38,13 @@ public class SwipeController : MonoBehaviour
         isItUp = false;
     }
 
-    /*void OnEnable()
-    {
-        EventManager.OnRestart.AddListener(RestartValues);
-    }
-    void OnDisable()
-    {
-        EventManager.OnRestart.RemoveListener(RestartValues);
-    }
-
-    void RestartValues()
-    {
-        isItRight = false;
-        isItLeft = false;
-        isItCenter = true;
-        isItUp = false;
-    }*/
-
+    public Vector3 jump;
+    public float jumpForce = 2.0f;
     void Start()
     {
         DOTween.Init();
+
+        jump = new Vector3(0.0f, 2.0f, 0.0f);
     }
 
     public Vector2 direction;
@@ -90,7 +77,7 @@ public class SwipeController : MonoBehaviour
                         heightChange = endTouchPosition.y - startTouchPosition.y;
                         differance = endTouchPosition.x - startTouchPosition.x;
 
-                        if(differance >= 100 && heightChange < 250.0f)
+                        if(differance >= 100 && heightChange < 150.0f)
                         {
                             if(isItCenter)
                             {
@@ -109,7 +96,7 @@ public class SwipeController : MonoBehaviour
 
                             EventManager.OnRightMove.Invoke();
                         }
-                        else if(differance <= -100 && heightChange < 250.0f)
+                        else if(differance <= -100 && heightChange < 150.0f)
                         {
                             if(isItCenter)
                             {
@@ -129,18 +116,14 @@ public class SwipeController : MonoBehaviour
                             EventManager.OnLeftMove.Invoke();
                         }
 
-                        if(heightChange >= 250.0f && transform.position.y == 0)
+                        if(heightChange >= 150.0f && transform.position.y == 0)
                         {
                             duration = 1.2f;
                             EventManager.OnCharacterJump.Invoke();
                             Jump(duration);
+                            //Jumpp();
                             //transform.DOLocalMove(new Vector3(0, 4, 0), .6f);//.OnComplete(()=> {transform.DOLocalMove(new Vector3(0, 1, 0), .3f);});
                         }
-                        /*else if(heightChange < 0)
-                        {
-                            duration = 0.1f;
-                            transform.DOLocalMoveY(0, duration);
-                        }*/
                         break;
                 }
             }
@@ -155,15 +138,11 @@ public class SwipeController : MonoBehaviour
                     .OnPlay(()=>{transform.DOLocalMove(transform.position + Vector3.zero, .25f);});
     }
 
-    /*void StartRun()
+    /*void Jumpp()
     {
-        animator.SetBool("isRuning", true);
-    }
-
-    IEnumerator StopJumpAnimation()
-    {
-        //yield return null;
-        yield return new WaitForSeconds(1.2f);
-        animator.SetBool("isJumping", false);
+        Vector3 jumpPos = new Vector3(0, 4, 0);
+        float t = 0/45;
+        //Rigidb.AddForce(jump * jumpForce, ForceMode.Impulse);
+        transform.position = Vector3.Lerp(Vector3.zero, jumpPos, t);
     }*/
 }
