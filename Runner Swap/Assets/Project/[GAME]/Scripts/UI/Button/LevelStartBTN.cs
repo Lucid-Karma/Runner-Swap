@@ -15,6 +15,6 @@ public class LevelStartBTN : MonoBehaviour
     {
         EventManager.OnLevelStart.Invoke();
         EventManager.OnPlayerStartedRunning.Invoke();
-        //EventManager.OnLevelStart.Invoke();
+        gameObject.SetActive(false);
     }
 }

@@ -8,6 +8,9 @@ public class CharacterTriggerController : MonoBehaviour
     public static int point;
     public static int health;
 
+    private float x;
+    private float z;
+
     void Awake()
     {
         point = 0;
@@ -25,8 +28,15 @@ public class CharacterTriggerController : MonoBehaviour
         }
         else if(other.gameObject.CompareTag("Obstacle"))
         {
-            health --;
+            x = other.gameObject.transform.position.x;
+            z = other.gameObject.transform.position.z;
+            Vector3 Position = new Vector3(x, 6, z);
 
+            other.gameObject.SetActive(false);
+            GhostManager.Instance.GetGhost(Position);
+        
+            health --;
+            Debug.Log(health);
             EventManager.OnPreLevelFail.Invoke();
 
             if(health >= 1)

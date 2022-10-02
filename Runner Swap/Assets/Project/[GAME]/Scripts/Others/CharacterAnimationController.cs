@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class CharacterAnimationController : MonoBehaviour
 {
-    //public Animator animator;
-
     private Animator animator;
     public Animator Animator { get { return (animator == null) ? animator = GetComponent<Animator>() : animator; } }
 
     void OnEnable()
     {
         EventManager.OnLevelStart.AddListener(StartRun);
+        //EventManager.OnCharacterJump.AddListener(ControlRun);
         EventManager.OnCharacterJump.AddListener(() => InvokeTrigger("Jump"));
         EventManager.OnPreDieAnimate.AddListener(() => InvokeTrigger("Stumble"));
         EventManager.OnLevelFail.AddListener(EndRun);
@@ -20,6 +19,7 @@ public class CharacterAnimationController : MonoBehaviour
     void OnDisable()
     {
         EventManager.OnLevelStart.RemoveListener(StartRun);
+        //EventManager.OnCharacterJump.RemoveListener(ControlRun);
         EventManager.OnCharacterJump.RemoveListener(() => InvokeTrigger("Jump"));
         EventManager.OnPreDieAnimate.RemoveListener(() => InvokeTrigger("Stumble"));
         EventManager.OnLevelFail.RemoveListener(EndRun);
@@ -45,6 +45,18 @@ public class CharacterAnimationController : MonoBehaviour
     {
         Animator.SetBool("isRunning", false);
     }
+    /*void ControlRun()
+    {
+        StartCoroutine(WaitAfterJump());
+    }
+    IEnumerator WaitAfterJump()
+    {
+        Animator.SetBool("isRunning", false);
+        yield return new WaitForSeconds(1.0f);
+
+        if(!GameManager.Instance.IsDead)
+            Animator.SetBool("isRunning", true);
+    }*/
 
     private void InvokeTrigger(string value)
     {

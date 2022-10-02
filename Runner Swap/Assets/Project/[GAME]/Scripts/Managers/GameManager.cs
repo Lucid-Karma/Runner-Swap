@@ -35,17 +35,20 @@ public class GameManager : Singleton<GameManager>
     void Awake()
     {
         IsGameStarted = true;
+        //IsDead = false;
         StartGame();
     }
 
     void OnEnable()
     {
+        //EventManager.OnLevelFail.AddListener(() => IsDead = false);
         EventManager.OnLevelStart.AddListener(() => IsLevelStarted = true);
         EventManager.OnLevelFail.AddListener(() => IsLevelStarted = false);
         EventManager.OnLevelFail.AddListener(() => IsDead = true);
     }
     void OnDisable()
     {
+        //EventManager.OnLevelFail.RemoveListener(() => IsDead = false);
         EventManager.OnLevelStart.RemoveListener(() => IsLevelStarted = true);
         EventManager.OnLevelFail.RemoveListener(() => IsLevelStarted = false);
         EventManager.OnLevelFail.RemoveListener(() => IsDead = true);
