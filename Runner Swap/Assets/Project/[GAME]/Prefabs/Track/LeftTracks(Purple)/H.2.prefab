@@ -407,7 +407,7 @@ MeshCollider:
   m_GameObject: {fileID: 7313123737344521382}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -853,7 +853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7749916265787899113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.08, z: 0.54}
+  m_LocalPosition: {x: 0, y: 7.85, z: 0.54}
   m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children: []
   m_Father: {fileID: 7311892559290514300}
@@ -870,9 +870,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.02745098, g: 0.6862745, b: 1, a: 1}
-  m_Intensity: 20
-  m_Range: 10
+  m_Color: {r: 0.4377358, g: 0.9294735, b: 1, a: 1}
+  m_Intensity: 50
+  m_Range: 9.616745
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -946,7 +946,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8270805940116321489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.08, z: 12.73}
+  m_LocalPosition: {x: 0, y: 7.85, z: 12.73}
   m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children: []
   m_Father: {fileID: 7311892559290514300}
@@ -963,8 +963,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.027450979, g: 0.68723404, b: 1, a: 1}
-  m_Intensity: 20
+  m_Color: {r: 0.4377358, g: 0.9294735, b: 1, a: 1}
+  m_Intensity: 50
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
