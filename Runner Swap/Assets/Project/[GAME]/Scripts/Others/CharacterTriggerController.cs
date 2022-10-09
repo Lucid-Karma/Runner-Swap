@@ -19,6 +19,8 @@ public class CharacterTriggerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if(!GameManager.Instance.IsDead)
+        {
         if(other.gameObject.CompareTag("coin"))
         {
             point ++;
@@ -30,20 +32,30 @@ public class CharacterTriggerController : MonoBehaviour
         {
             x = other.gameObject.transform.position.x;
             z = other.gameObject.transform.position.z;
-            Vector3 Position = new Vector3(x, 6, z);
+            Vector3 Position = new Vector3(x, 1.5f, z);
 
-            other.gameObject.SetActive(false);
-            GhostManager.Instance.GetGhost(Position);
+            //other.gameObject.SetActive(false);
+            //GhostManager.Instance.GetGhost(Position);
         
             health --;
-            Debug.Log(health);
+            Debug.Log(health + " " + other.gameObject.name);
             EventManager.OnPreLevelFail.Invoke();
 
             if(health >= 1)
+            {
                 EventManager.OnPreDieAnimate.Invoke();
+
+                other.gameObject.SetActive(false);
+                GhostManager.Instance.GetGhost(Position);
+            }                
 
             if(health <= 0)
                 StartCoroutine(WaitBeforeFail());
+        }
+        /*else if(other.gameObject.CompareTag("obsStuff"))
+        {
+            other.gameObject.SetActive(false);
+        }*/
         }
     }
 

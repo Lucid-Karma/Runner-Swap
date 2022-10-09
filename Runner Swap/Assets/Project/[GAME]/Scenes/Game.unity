@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 469b8080a704f1248b3f39630886e7e5, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1383,30 +1383,6 @@ PrefabInstance:
     - {fileID: -6400281290468069383, guid: debd8bed958801247bb9ebd801cd2c39, type: 3}
     - {fileID: -7635826562936255635, guid: debd8bed958801247bb9ebd801cd2c39, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: debd8bed958801247bb9ebd801cd2c39, type: 3}
---- !u!1 &502255627 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 635547659545568360, guid: debd8bed958801247bb9ebd801cd2c39, type: 3}
-  m_PrefabInstance: {fileID: 502255626}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &502255628
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502255627}
-  m_Enabled: 0
-  m_Avatar: {fileID: 9000000, guid: debd8bed958801247bb9ebd801cd2c39, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3fceab39d5f79754482267a908758e5d, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &556088415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,7 +1977,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.69803923, g: 0.20392157, b: 0.23921569, a: 0}
+  m_BackGroundColor: {r: 0.69411767, g: 0.20000002, b: 0.23529413, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2061,8 +2037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerColor: {r: 0.69411767, g: 0.20000002, b: 0.23529413, a: 1}
-  leftColor: {r: 0.7254902, g: 0.3019608, b: 0.8980392, a: 1}
-  rightColor: {r: 0.29803923, g: 0.84705883, b: 1, a: 1}
+  leftColor: {r: 0.25882354, g: 0.1764706, b: 0.23137255, a: 1}
+  rightColor: {r: 0.1882353, g: 0.44705883, b: 0.21176471, a: 1}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3100,7 +3076,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240780759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 103, y: 0, z: -2.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1553873564}

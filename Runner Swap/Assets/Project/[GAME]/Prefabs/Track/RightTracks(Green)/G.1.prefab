@@ -618,6 +618,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6213643242697703192, guid: ee2ab2bbd27a58d4c96f00c82cad1a52, type: 3}
+      propertyPath: m_TagString
+      value: obsStuff
+      objectReference: {fileID: 0}
     - target: {fileID: 6259386089846951366, guid: ee2ab2bbd27a58d4c96f00c82cad1a52, type: 3}
       propertyPath: m_Convex
       value: 1
