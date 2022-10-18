@@ -838,7 +838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 211393127133604351}
   - component: {fileID: 6381840454843637147}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,7 +931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3667437112510733297}
   - component: {fileID: 4301884908818813523}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
