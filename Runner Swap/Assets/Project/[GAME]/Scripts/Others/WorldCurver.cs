@@ -10,8 +10,8 @@ public class WorldCurver : MonoBehaviour
 
     private void OnEnable()
     {
-        //m_CurveStrengthID = Shader.PropertyToID("_CurveStrength");
-		m_CurveStrengthID = Shader.PropertyToID("Road");
+        m_CurveStrengthID = Shader.PropertyToID("_CurveStrength");
+		//m_CurveStrengthID = Shader.PropertyToID("Road");
     }
 
 	void Update()
