@@ -21,9 +21,11 @@ public class Audio : MonoBehaviour
         {
             Destroy( gameObject );
         }
+
+        background.Play();
     }
 
-    void OnEnable()
+    /*void OnEnable()
     {
         EventManager.OnMusicOn.AddListener(PlayMusic);
         EventManager.OnMusicOff.AddListener(PauseMusic);
@@ -41,5 +43,5 @@ public class Audio : MonoBehaviour
     public void PauseMusic()
     {
         background.Pause();
-    }
+    }*/
 }
