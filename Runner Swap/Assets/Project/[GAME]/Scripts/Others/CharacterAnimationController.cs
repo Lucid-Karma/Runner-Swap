@@ -10,6 +10,7 @@ public class CharacterAnimationController : MonoBehaviour
     void OnEnable()
     {
         EventManager.OnLevelStart.AddListener(StartRun);
+        //EventManager.OnLevelStart.AddListener(() => InvokeTrigger("Run"));
         //EventManager.OnCharacterJump.AddListener(ControlRun);
         EventManager.OnCharacterJump.AddListener(() => InvokeTrigger("Jump"));
         EventManager.OnPreDieAnimate.AddListener(() => InvokeTrigger("Stumble"));
@@ -19,6 +20,7 @@ public class CharacterAnimationController : MonoBehaviour
     void OnDisable()
     {
         EventManager.OnLevelStart.RemoveListener(StartRun);
+        //EventManager.OnLevelStart.RemoveListener(() => InvokeTrigger("Run"));
         //EventManager.OnCharacterJump.RemoveListener(ControlRun);
         EventManager.OnCharacterJump.RemoveListener(() => InvokeTrigger("Jump"));
         EventManager.OnPreDieAnimate.RemoveListener(() => InvokeTrigger("Stumble"));

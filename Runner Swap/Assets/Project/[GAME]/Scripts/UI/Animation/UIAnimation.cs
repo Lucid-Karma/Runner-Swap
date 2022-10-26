@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class CreditsAnimation : MonoBehaviour
+public class UIAnimation : Singleton<UIAnimation>
 {
     public float fadeTime = 1f;
     public CanvasGroup canvasGroup;
