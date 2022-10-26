@@ -138,11 +138,13 @@ public class SwipeController : MonoBehaviour
                     .OnPlay(()=>{transform.DOLocalMove(transform.position + Vector3.zero, .25f);});
     }
 
-    /*void Jumpp()
+    /*public float jumpforce;
+    void Jumpp()
     {
         Vector3 jumpPos = new Vector3(0, 4, 0);
-        float t = 0/45;
+        float t = .1f;
         //Rigidb.AddForce(jump * jumpForce, ForceMode.Impulse);
+        //Rigidb.AddForce(0, jumpforce * Time.deltaTime, 0, ForceMode.Impulse);
         transform.position = Vector3.Lerp(Vector3.zero, jumpPos, t);
     }*/
 }

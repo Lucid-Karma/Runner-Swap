@@ -10,6 +10,7 @@ public class CharacterTriggerController : MonoBehaviour
 
     private float x;
     private float z;
+    private float y;
 
     void Awake()
     {
@@ -32,13 +33,14 @@ public class CharacterTriggerController : MonoBehaviour
         {
             x = other.gameObject.transform.position.x;
             z = other.gameObject.transform.position.z;
+            y = other.gameObject.transform.position.y;
             Vector3 Position = new Vector3(x, 1.5f, z);
 
             //other.gameObject.SetActive(false);
             //GhostManager.Instance.GetGhost(Position);
         
             health --;
-            Debug.Log(health + " " + other.gameObject.name);
+            //Debug.Log(health + " " + other.gameObject.name);
             EventManager.OnPreLevelFail.Invoke();
 
             if(health >= 1)
@@ -47,6 +49,7 @@ public class CharacterTriggerController : MonoBehaviour
 
                 other.gameObject.SetActive(false);
                 GhostManager.Instance.GetGhost(Position);
+                StartCoroutine(SetActiveObstacle(other));
             }                
 
             if(health <= 0)
@@ -64,5 +67,10 @@ public class CharacterTriggerController : MonoBehaviour
         EventManager.OnLevelFail.Invoke();
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    IEnumerator SetActiveObstacle(Collider obstacle)
+    {
+        yield return new WaitForSeconds(1.0f);
+        obstacle.gameObject.SetActive(true);
     }
 }
