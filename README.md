@@ -1,5 +1,6 @@
 # Runner-Swap
-Here is my first ever game I made for mobile. An infinite runner game with swap ability.
+Here is my first ever game I made for mobile. An infinite runner game with swap ability. <br> 
+An endless runner game that gives feeling like playing three different levels at once.
 
 Gameplay: https://youtube.com/shorts/Czn4TtCyOpA
 
