@@ -1,7 +1,7 @@
 # Runner-Swap
 Here is my first ever game I made for mobile. An infinite runner game with swap ability.
 
-Gameplay: https://youtu.be/2KhqGn8dVLQ
+Gameplay: https://youtube.com/shorts/Czn4TtCyOpA
 
 ![Ekran Görüntüsü (464)](https://user-images.githubusercontent.com/88732917/212995352-92aeddf7-a3db-49d5-b4c8-0ca8aff878e2.png)
 
